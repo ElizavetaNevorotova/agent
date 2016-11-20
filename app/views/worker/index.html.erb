@@ -1,0 +1,19 @@
+<table>
+  <% @workers.each do |w|%>
+      <tr>
+        <td>
+          <%= w.first_name%>
+        </td>
+        <td>
+          <%= w.last_name%>
+        </td>
+        <td>
+          <%= w.phone_number%>
+        </td>
+        <td>
+          <%=button_to('Оставить отзыв',comment_index_path,method: :get, id: w.id) %>
+        </td>
+      </tr>
+
+<%end%>
+</table>

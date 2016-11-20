@@ -1,0 +1,2 @@
+class KlientController < ApplicationController
+end

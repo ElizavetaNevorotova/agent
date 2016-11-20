@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agent</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%=image_tag("backP.jpg")%>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+    <ul class="nav navbar-nav">
+      <li class="<%= 'active' if params[:controller] == '' %>"><a href="/">Главная</a></li>
+      <li class="<%= 'active' if params[:controller] == 'service' %>"><a href="/service">Услуги</a></li>
+      <li class="<%= 'active' if params[:controller] == 'klient' %>"><a href="/klient">Клиент</a></li>
+      <li class="<%= 'active' if params[:controller] == '' %>"><a href="/">О компании</a></li>
+      <li class="<%= 'active' if params[:controller] == '' %>"><a href="/">Контакты</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Зрегистироваться</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
+    </ul>
+  </nav>
+    <%= yield %>
+
+  </body>
+</html>
